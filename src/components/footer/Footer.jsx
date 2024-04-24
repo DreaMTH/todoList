@@ -1,7 +1,8 @@
+import "./Footer.css";
 export const Footer = () => {
   return (
-    <>
-      <h3>There are some footer @{new Date().getFullYear()}</h3>
-    </>
+    <div className="root">
+      <h3>Created by ddreamth @{new Date().getFullYear()}</h3>
+    </div>
   );
 };
