@@ -1,0 +1,9 @@
+div {
+  font-family: "Fira Code", monospace;
+}
+ul {
+  list-style: none;
+}
+input[type="checkbox"] {
+  color: red;
+}

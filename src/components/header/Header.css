@@ -10,8 +10,8 @@
 }
 nav {
   display: flex;
-  flex-direction: column;
 }
 a {
+  padding: 10px;
   text-decoration: none;
 }
