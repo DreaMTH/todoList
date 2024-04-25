@@ -1,9 +1,75 @@
-div {
+.todoRoot {
   font-family: "Fira Code", monospace;
+  margin: 1rem 0;
+  box-shadow: 0 0 1rem #242424;
+  padding: 10px;
+  border: 0.1rem solid hsla(250, 80%, 20%, 0.5);
 }
 ul {
   list-style: none;
 }
+
+li {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 0.5rem #242424;
+  border: 1px solid hsla(250, 80%, 20%, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  margin: 10px auto;
+  width: 50%;
+}
+h4 {
+  /*width: 10%;*/
+}
+input[type="text"] {
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 0 0.2rem #242424;
+  border-radius: 10px;
+}
+input[type="submit"] {
+  border: none;
+  font-size: 14px;
+  margin-left: 0.5rem;
+  font-weight: 700;
+  font-family: "Fira Code", monospace;
+  color: #242424;
+  box-shadow: 0 0 0.2rem #242424;
+  border-radius: 10px;
+}
+
 input[type="checkbox"] {
-  color: red;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  font: inherit;
+  color: currentColor;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 5px;
+  transform: translateY(1.25rem);
+  border: 0.1rem solid #242424;
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before{
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  transform: scale(0);
+  transition: 120ms transform erase-in-out;
+  box-shadow: inset 1em 1em hsla(250, 80%, 50%, 0.8);
+  border-radius: 3px;
+
+}
+input[type="checkbox"]:checked::before{
+  transform: scale(1);
+}
+input[type="checkbox"]:checked:hover::before{
+  opacity: 50%;
 }

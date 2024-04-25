@@ -6,7 +6,7 @@ export const TodoList = () => {
   const todoList = todos.map((todo) => (
     <li key={todo}>
       <input type="checkbox" />
-      {todo}
+      <h4>{todo}</h4>
     </li>
   ));
   const onAdd = (e) => {
@@ -22,7 +22,7 @@ export const TodoList = () => {
   };
   return (
     <>
-      <div>
+      <div className="todoRoot">
         <ul>
           {todoList}
           <li>
@@ -33,7 +33,7 @@ export const TodoList = () => {
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
               />
-              <input type="submit" />
+              <input type="submit" value="Add todo" />
             </form>
           </li>
         </ul>
